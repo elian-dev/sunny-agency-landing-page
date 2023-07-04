@@ -32,16 +32,17 @@
 
     &--active {
         position: absolute;
+        z-index: 3;
         top: 100px;
         left: 50%;
         transform: translateX(-50%);
         
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
         justify-content: center;
 
-        width: 85%;
+        width: 80%;
 
         background-color: $color-white;
 
@@ -67,12 +68,12 @@
         &__item {
             padding: 1rem 1.5rem;
             color: $color-white;
-            border-bottom: 2px solid transparent;
+            border: 3px solid transparent;
 
             &:hover {
                 cursor: pointer;
                 color: $color-white;
-                border-bottom: 2px solid $dark-desaturated-cyan;
+                border-bottom-color: $color-white;
             }
 
             &--contact {
@@ -84,7 +85,7 @@
                     color: $color-white;
                     text-decoration: none;
                     background-color: $color-white-1;
-                    border: none;
+                    border: 3px solid transparent
                 }
             }
         }

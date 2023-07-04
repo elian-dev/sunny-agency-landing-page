@@ -3,7 +3,7 @@ color and background using the name in the class
 and the value as the property value that we need
 
 Ex: .color--white { color: #FFFFFFF; } and
-.bg-color--white { background-color: #FFFFFF; }*/
+.bg-color--white { background-color: #FFFFFF; } */
 @each $color-name,
 $color-value in $colors {
     .color--#{$color-name} {
@@ -13,6 +13,4 @@ $color-value in $colors {
     .bg-color--#{$color-name} {
         background-color: $color-value;
     }
-}
-
-;
+};

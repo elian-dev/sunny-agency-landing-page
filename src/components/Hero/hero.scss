@@ -8,10 +8,13 @@
     --hero-max-height: 750;
     --hero-min-screen-size: 320;
     --hero-max-screen-size: 1440;
+    --header-height: 70px;
 
     @media screen and (min-width: 1024px) {
         --hero-wrapper-margin: 3rem;
+        --header-height: 110px;
     }
+
 }
 
 .hero {
@@ -20,7 +23,60 @@
     background: var(--hero-bg);
 
     &__full-height {
-        height: 100vh;
+        height: calc(100vh - var(--header-height));
+    }
+
+    &__absolute-layout {
+        position: relative;
+
+        .hero__wrapper {
+            justify-content: center;
+            height: calc(calc(var(--hero-min-height) * 1px) + ((var(--hero-max-height) - var(--hero-min-height)) * ((100vw - calc(var(--hero-min-screen-size) * 1px)) / (var(--hero-max-screen-size) - var(--hero-min-screen-size)))));
+            max-height: calc(var(--hero-max-height) * 1px);
+
+            .hero__content-container {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                margin-bottom: 5%;
+
+                .hero__content-wrapper {
+                    @media screen and (min-width: 1024px) {
+                        max-width: var(--hero-max-width-content-wrapper);
+                        margin-right: auto;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                align-items: center;
+                justify-content: flex-start;
+            }
+        }
+
+        .hero__image-container {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            picture {
+                overflow: hidden;
+                height: 100%;
+
+                img {
+                    width: auto;
+                    max-width: initial;
+                    height: 100%;
+
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
     }
 
     .hero__wrapper {
@@ -28,6 +84,7 @@
         flex-direction: column;
 
         .hero__content-container {
+            z-index: 2;
             order: 2;
 
             .hero__content-wrapper {
@@ -75,56 +132,41 @@
         }
     }
 
-    &__absolute-layout {
-        position: relative;
+}
 
-        .hero__wrapper {
-            justify-content: center;
-            height: calc(calc(var(--hero-min-height) * 1px) + ((var(--hero-max-height) - var(--hero-min-height)) * ((100vw - calc(var(--hero-min-screen-size) * 1px)) / (var(--hero-max-screen-size) - var(--hero-min-screen-size)))));
-            max-height: calc(var(--hero-max-height) * 1px);
+.hero-image__img {
+    width: 100% !important;
+    height: 100% !important;
+}
 
-            .hero__content-container {
-                position: relative;
-                z-index: 2;
+.hero-content {
+    &__title {
+        max-width: 10ch;
+        margin: 10rem auto 0;
 
-                .hero__content-wrapper {
-                    @media screen and (min-width: 1024px) {
-                        max-width: var(--hero-max-width-content-wrapper);
-                        margin-right: auto;
-                    }
-                }
-            }
+        font-family: 'Fraunces', serif;
+        font-size: 3rem;
+        line-height: 1.2;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
 
-            @media screen and (min-width: 1024px) {
-                align-items: center;
-                justify-content: flex-start;
-            }
-        }
-
-
-
-        .hero__image-container {
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 0;
-
-            width: 100%;
-            height: 100%;
-
-            picture {
-                overflow: hidden;
-                height: 100%;
-
-                img {
-                    width: auto;
-                    max-width: initial;
-                    height: 100%;
-
-                    object-fit: cover;
-                    object-position: center;
-                }
-            }
+        @media screen and (min-width: 1024px) {
+            max-width: 100%;
+            margin: 0 auto 0 0;
+            font-size: 3rem;
         }
     }
+
+    &__arrow-down {
+        width: 4rem;
+        margin: 3rem auto 0;
+
+        @media screen and (min-width: 1024px) {
+            width: 3rem;
+            margin-top: 4rem;
+        }
+    }
+
 }
