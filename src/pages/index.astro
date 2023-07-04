@@ -27,24 +27,81 @@ const {} = Astro.props
     />
   </Hero>
 
-  <main>
-    Transform your brand We are a full-service creative agency specializing in
-    helping brands grow fast. Engage your clients through compelling visuals
-    that do most of the marketing for you. Learn more Stand out to the right
-    audience Using a collaborative formula of designers, researchers,
-    photographers, videographers, and copywriters, we’ll build and extend your
-    brand in digital places. Learn more Graphic design Great design makes you
-    memorable. We deliver artwork that underscores your brand message and
-    captures potential clients’ attention. Photography Increase your credibility
-    by getting the most stunning, high-quality photos that improve your business
-    image. Client testimonials We put our trust in Sunnyside and they delivered,
-    making sure our needs were met and deadlines were always hit. Emily R.
-    Marketing Director Sunnyside’s enthusiasm coupled with their keen interest
-    in our brand’s success made it a satisfying and enjoyable experience. Thomas
-    S. Chief Operating Officer Incredible end result! Our sales increased over
-    400% when we worked with Sunnyside. Highly recommended! Jennie F. Business
-    Owner About Services Projects Contact
+  <main class='services'>
+    <Picture
+      className='services-thumb'
+      src='/assets/images/services/image-transform.jpg'
+      alt='transform'
+    />
+
+    <div class='services-content'>
+      <h2 class='services-content__title'>Transform your brand</h2>
+      <p class='services-content__content'>
+        We are a full-service creative agency specializing in helping brands
+        grow fast. Engage your clients through compelling visuals that do most
+        of the marketing for you.
+      </p>
+      <a
+        class='services-content__more services-content__more--color-yellow'
+        href='#'>Learn more</a
+      >
+    </div>
+
+    <Picture
+      className='services-thumb'
+      src='/assets/images/services/image-stand-out.jpg'
+      alt='stand out'
+    />
+
+    <div class='services-content'>
+      <h2 class='services-content__title'>Stand out to the right audience</h2>
+      <p class='services-content__content'>
+        Using a collaborative formula of designers, researchers, photographers,
+        videographers, and copywriters, we’ll build and extend your brand in
+        digital places.
+      </p>
+      <a
+        class='services-content__more services-content__more--color-pink'
+        href='#'>Learn more</a
+      >
+    </div>
+
+    <div class='services-content'>
+      <Picture
+        className='services-thumb'
+        src='/assets/images/services/image-graphic-design.jpg'
+        alt='graphic design'
+      />
+      <h2 class='services-content__title'>Graphic design</h2>
+      <p class='services-content__content'>
+        Great design makes you memorable. We deliver artwork that underscores
+        your brand message and captures potential clients’ attention.
+      </p>
+    </div>
+
+    <div class='services-content'>
+      <Picture
+        className='services-thumb'
+        src='/assets/images/services/image-photography.jpg'
+        alt='photography'
+      />
+      <h2 class='services-content__title'>Photography</h2>
+      <p class='services-content__content'>
+        Increase your credibility by getting the most stunning, high-quality
+        photos that improve your business image.
+      </p>
+    </div>
   </main>
+
+  <div>
+    Client testimonials We put our trust in Sunnyside and they delivered, making
+    sure our needs were met and deadlines were always hit. Emily R. Marketing
+    Director Sunnyside’s enthusiasm coupled with their keen interest in our
+    brand’s success made it a satisfying and enjoyable experience. Thomas S.
+    Chief Operating Officer Incredible end result! Our sales increased over 400%
+    when we worked with Sunnyside. Highly recommended! Jennie F. Business Owner
+    About Services Projects Contact
+  </div>
 
   <div class='attribution'>
     Challenge by <a
@@ -53,3 +110,80 @@ const {} = Astro.props
     >. Coded by <a href='#'>Your Name Here</a>.
   </div>
 </Layout>
+
+<style lang='scss'>
+  .services {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .services-content {
+    padding: 4rem 2rem;
+    &__title {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: hsl(212deg 27% 19%);
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    &__content {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: hsl(210deg 4% 67%);
+    }
+
+    &__more {
+      width: fit-content;
+      font-size: 1.2rem;
+      font-family: 'Fraunces', serif;
+      text-transform: uppercase;
+      text-align: center;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+      color: hsl(212deg 27% 19%);
+
+      &--color-yellow {
+        &::after {
+          content: '';
+          display: inline-block;
+          background-color: hsl(51deg 100% 49%);
+          opacity: 0.2;
+          width: 110%;
+          height: 0.6rem;
+          border-radius: 2rem;
+          position: absolute;
+          bottom: -2px;
+          left: -8px;
+          z-index: -1;
+        }
+      }
+
+      &--color-pink {
+        &::after {
+          content: '';
+          display: inline-block;
+          background-color: hsl(7deg 99% 70%);
+          opacity: 0.2;
+          width: 110%;
+          height: 0.6rem;
+          border-radius: 2rem;
+          position: absolute;
+          bottom: -2px;
+          left: -8px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+</style>
