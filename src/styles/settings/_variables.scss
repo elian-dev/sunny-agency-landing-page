@@ -2,22 +2,30 @@
 with the color name as the key and the hex
 as the value
 
-And we are goint to use it in _utils.scss*/
+And we are goint to use it in _utils.scss */
 $colors: (
-    "dark-blue-gray": #666CA3,
-    "dark-blue": #13183F,
-    "waterloo": #83869A,
-    "violet-red": #F74780,
-    "pink": #FFA7C3,
-    "black": #000000,
-    "white": #FFFFFF,
-    "red": #FF0000,
+    soft-red: hsl(7deg 99% 70%),
+    color-yellow: hsl(51deg 100% 49%),
+    dark-desaturated-cyan: hsl(167deg 40% 24%),
+    dark-blue: hsl(198deg 62% 26%),
+    dark-moderate-cyan: hsl(168deg 34% 41%),
+    very-dark-desaturated-blue: hsl(212deg 27% 19%),
+    very-dark-grayish-blue: hsl(213deg 9% 39%),
+    dark-grayish-blue: hsl(232deg 10% 55%),
+    grayish-blue: hsl(210deg 4% 67%),
+    color-white: hsl(0deg 0% 100%),
+    color-white-1: hsl(0deg 0% 100% / 10%),
 );
-$color-white: #FFFFFF;
-$color-black: #000000;
-$color-dark-blue-gray: #666CA3;
-$color-dark-blue: #13183F;
-$color-waterloo: #83869A;
-$color-violet-red: #F74780;
-$color-pink: #FFA7C3;
-$color-red: #FF0000;
+$soft-red: hsl(7deg 99% 70%);
+$color-yellow: hsl(51deg 100% 49%);
+$dark-desaturated-cyan: hsl(167deg 40% 24%);
+$dark-blue: hsl(198deg 62% 26%);
+$dark-moderate-cyan: hsl(168deg 34% 41%);
+$very-dark-desaturated-blue: hsl(212deg 27% 19%);
+$very-dark-grayish-blue: hsl(213deg 9% 39%);
+$dark-grayish-blue: hsl(232deg 10% 55%);
+$grayish-blue: hsl(210deg 4% 67%);
+$color-white: hsl(0deg 0% 100%);
+$color-white-1: hsl(0deg 0% 100% / 30%);
+$color-black: hsl(0deg 0% 0%);
+$color-red: hsl(0deg 100% 63%);

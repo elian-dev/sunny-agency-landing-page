@@ -1,19 +1,21 @@
 ---
-import HeaderNavigation from "./Navigation/HeaderNavigation.astro";
+import HeaderNavigation from './Navigation/HeaderNavigation.astro'
+import logo from '../assets/images/logo.svg'
 ---
 
-<header class="site__header">
-  <div class="header__inner">
-    <div class="wrapper">
-      <div class="logo">
-        <a href="/">
-          Logo Here
-          <!-- <img src="/assets/images/LOGO.png" alt="ALT" /> -->
-        </a>
-      </div>
-      <div class="navigation">
-        <HeaderNavigation />
-      </div>
-    </div>
-  </div>
+<header class='header'>
+  <a href='/'>
+    <picture class='header__logo-picture'>
+      <source srcset={logo} type='image/svg+xml' />
+      <img class='header__logo' src={logo} alt='Sunnyside logo' />
+    </picture>
+  </a>
+
+  <img
+    class='navigation__item--hamburguer'
+    src='/assets/images/icon-hamburguer.svg'
+    alt='Icon menu'
+  />
+
+  <HeaderNavigation />
 </header>

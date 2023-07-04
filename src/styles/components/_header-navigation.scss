@@ -1,0 +1,35 @@
+.navigation {
+    display: none;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__item {
+        padding: 1rem;
+        font-size: 1.5rem;
+        color: $color-white;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        &--contact {
+            padding: 1.5rem 3rem;
+
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            color: $color-black;
+            text-transform: uppercase;
+
+            background-color: $color-white;
+            border-radius: 3rem;
+
+            &:hover {
+                cursor: pointer;
+                color: $color-white;
+                background-color: $color-white-1;
+            }
+        }
+    }
+}
