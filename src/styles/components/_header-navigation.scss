@@ -1,35 +1,93 @@
 .navigation {
     display: none;
     gap: 1.5rem;
-    align-items: center;
-    justify-content: flex-end;
+    padding: 1rem 0 2rem;
 
     &__item {
-        padding: 1rem;
-        font-size: 1.5rem;
-        color: $color-white;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
 
-        &:hover {
-            cursor: pointer;
-            text-decoration: underline;
-        }
+        font-size: 1rem;
+        color: $grayish-blue;
 
         &--contact {
-            padding: 1.5rem 3rem;
-
             font-family: 'Fraunces', serif;
             font-weight: 700;
             color: $color-black;
             text-transform: uppercase;
 
-            background-color: $color-white;
+            background-color: $color-yellow;
             border-radius: 3rem;
+        }
+
+        &--hamburguer {
+            width: 2rem;
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    &--active {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: center;
+
+        width: 85%;
+
+        background-color: $color-white;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: -20px;
+            right: 0;
+
+            width: 0;
+            height: 0;
+
+            border-bottom: 40px solid $color-white;
+            border-left: 40px solid transparent;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        padding: 0;
+
+        &__item {
+            padding: 1rem 1.5rem;
+            color: $color-white;
+            border-bottom: 2px solid transparent;
 
             &:hover {
                 cursor: pointer;
                 color: $color-white;
-                background-color: $color-white-1;
+                border-bottom: 2px solid $dark-desaturated-cyan;
+            }
+
+            &--contact {
+                color: $color-black;
+                background-color: $color-white;
+                border-radius: 3rem;
+
+                &:hover {
+                    color: $color-white;
+                    text-decoration: none;
+                    background-color: $color-white-1;
+                    border: none;
+                }
             }
         }
-    }
+
+    }    
 }

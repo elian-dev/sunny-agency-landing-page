@@ -13,9 +13,17 @@ import logo from '../assets/images/logo.svg'
 
   <img
     class='navigation__item--hamburguer'
-    src='/assets/images/icon-hamburguer.svg'
+    src='/assets/images/icon-hamburger.svg'
     alt='Icon menu'
   />
-
   <HeaderNavigation />
 </header>
+
+<script>
+  const hamburguer = document.querySelector('.navigation__item--hamburguer')
+  const navigation = document.querySelector('.navigation')
+
+  hamburguer.addEventListener('click', () => {
+    navigation.classList.toggle('navigation--active')
+  })
+</script>
