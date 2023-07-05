@@ -66,7 +66,7 @@ const {} = Astro.props
       >
     </div>
 
-    <div class='services-content'>
+    <div class='services-content services-content--absolute'>
       <Picture
         className='services-thumb'
         src='/assets/images/services/image-graphic-design.jpg'
@@ -79,7 +79,7 @@ const {} = Astro.props
       </p>
     </div>
 
-    <div class='services-content'>
+    <div class='services-content services-content--absolute'>
       <Picture
         className='services-thumb'
         src='/assets/images/services/image-photography.jpg'
@@ -92,6 +92,51 @@ const {} = Astro.props
       </p>
     </div>
   </main>
+
+  <section class='testimonials'>
+    <h2 class='testimonials__title'>Client testimonials</h2>
+
+    <div class='testimonials__wrap'>
+      <div class='testimonial'>
+        <img
+          class='testimonial__photo'
+          src='/assets/images/image-emily.jpg'
+          alt='Emily photo'
+        />
+        <p class='testimonial__content'>
+          We put our trust in Sunnyside and they delivered, making sure our
+          needs were met and deadlines were always hit.
+        </p>
+        <h3 class='testimonial__name'>Emily R.</h3>
+      </div>
+
+      <div class='testimonial'>
+        <img
+          class='testimonial__photo'
+          src='/assets/images/image-thomas.jpg'
+          alt='Thomas photo'
+        />
+        <p class='testimonial__content'>
+          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
+          success made it a satisfying and enjoyable experience.
+        </p>
+        <h3 class='testimonial__name'>Thomas S.</h3>
+      </div>
+
+      <div class='testimonial'>
+        <img
+          class='testimonial__photo'
+          src='/assets/images/image-jennie.jpg'
+          alt='Jennie photo'
+        />
+        <p class='testimonial__content'>
+          Incredible end result! Our sales increased over 400% when we worked
+          with Sunnyside. Highly recommended!
+        </p>
+        <h3 class='testimonial__name'>Jennie F.</h3>
+      </div>
+    </div>
+  </section>
 
   <div>
     Client testimonials We put our trust in Sunnyside and they delivered, making
@@ -120,6 +165,18 @@ const {} = Astro.props
 
     @media (min-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        'thumb-1 content-1'
+        'content-2 thumb-2'
+        'thumb-3 thumb-4';
+    }
+
+    .services-thumb {
+      height: 100%;
+      img {
+        height: 100%;
+      }
     }
   }
 
@@ -186,6 +243,101 @@ const {} = Astro.props
           z-index: -1;
         }
       }
+    }
+
+    &--absolute {
+      position: relative;
+      padding: 100% 2rem 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (min-width: 768px) {
+        padding: 50% 4em 3rem 4rem;
+      }
+
+      .services-thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .services-content__title {
+        z-index: 1;
+      }
+
+      .services-content__content {
+        z-index: 1;
+        color: hsl(167deg 40% 24%);
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 4rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &__title {
+        text-align: left;
+      }
+
+      &__content {
+        text-align: left;
+      }
+
+      &__more {
+        margin: 0;
+      }
+
+      &--absolute {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-top: 50%;
+      }
+
+      // Areas for desktop
+      &:nth-child(1) {
+        grid-area: content-1;
+      }
+      &:nth-child(2) {
+        grid-area: thumb-1;
+      }
+      &:nth-child(3) {
+        grid-area: content-2;
+      }
+      &:nth-child(4) {
+        grid-area: thumb-2;
+      }
+      &:nth-child(5) {
+        grid-area: thumb-3;
+      }
+      &:nth-child(6) {
+        grid-area: thumb-4;
+      }
+    }
+  }
+
+  // Testimonials
+  .testimonials {
+    scroll-snap-align: start;
+
+    &__title {
+      text-align: center;
+      font-size: 2rem;
+      font-family: 'Fraunces', serif;
+    }
+  }
+
+  .testimonial {
+    &__photo {
+      width: 45px;
+      height: 45px;
     }
   }
 </style>
