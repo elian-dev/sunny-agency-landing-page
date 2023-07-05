@@ -85,6 +85,13 @@ ul li::marker {
 }
 
 main {
+  scroll-snap-type: y mandatory;
+  max-height: 100vh;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   ul li {
     list-style-type: disc;
   }
