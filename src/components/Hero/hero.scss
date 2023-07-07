@@ -8,11 +8,11 @@
     --hero-max-height: 750;
     --hero-min-screen-size: 320;
     --hero-max-screen-size: 1440;
-    --header-height: 70px;
+    --header-height: 0px;
 
     @media screen and (min-width: 1024px) {
         --hero-wrapper-margin: 3rem;
-        --header-height: 110px;
+        --header-height: 0px;
     }
 
 }

@@ -85,9 +85,6 @@ ul li::marker {
 }
 
 main {
-  scroll-snap-type: y mandatory;
-  max-height: 100vh;
-
   &::-webkit-scrollbar {
     display: none;
   }
@@ -182,4 +179,9 @@ swiper-container {
   font-size: 2rem;
   line-height: 1.5;
   text-align: center;
+}
+
+.main {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
 }

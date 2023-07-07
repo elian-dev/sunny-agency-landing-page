@@ -27,7 +27,7 @@ const {} = Astro.props
     />
   </Hero>
 
-  <main class='services'>
+  <section class='services'>
     <Picture
       className='services-thumb'
       src='/assets/images/services/image-transform.jpg'
@@ -91,7 +91,7 @@ const {} = Astro.props
         photos that improve your business image.
       </p>
     </div>
-  </main>
+  </section>
 
   <section class='testimonials'>
     <h2 class='testimonials__title'>Client testimonials</h2>
@@ -326,7 +326,6 @@ const {} = Astro.props
   // Testimonials
   .testimonials {
     scroll-snap-align: start;
-
     &__title {
       text-align: center;
       font-size: 2rem;
