@@ -185,3 +185,28 @@ swiper-container {
   scroll-snap-type: y mandatory;
   height: 100vh;
 }
+
+// Bounce animation for arrow down, down to up
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-10px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+@keyframes display-faded {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }   
+}

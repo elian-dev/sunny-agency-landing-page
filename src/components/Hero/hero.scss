@@ -153,6 +153,8 @@
         text-transform: uppercase;
         letter-spacing: 5px;
 
+        animation: display-faded 2s ease-in-out;
+
         @media screen and (min-width: 1024px) {
             max-width: 100%;
             margin: 0 auto 0 0;
@@ -163,7 +165,7 @@
     &__arrow-down {
         width: 4rem;
         margin: 3rem auto 0;
-        animation: bounce 2s infinite;
+        animation: display-faded 2s ease-in-out, bounce 2s ease-in-out infinite;
 
         @media screen and (min-width: 1024px) {
             width: 3rem;
@@ -173,17 +175,3 @@
 
 }
 
-// Bounce animation for arrow down, down to up
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}

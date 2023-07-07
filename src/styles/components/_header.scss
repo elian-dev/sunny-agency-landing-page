@@ -12,6 +12,8 @@
     max-height: 70px;
     padding: 0.5rem 1rem;
 
+    animation: display-faded 1s ease-in-out;
+
     .header__logo {
         cursor: pointer;
         width: 150px;
