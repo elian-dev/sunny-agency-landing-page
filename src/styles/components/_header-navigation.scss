@@ -69,7 +69,8 @@
         &__item {
             padding: 1rem 1.5rem;
             color: $color-white;
-            border: 3px solid transparent;
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
 
             &:hover {
                 cursor: pointer;
@@ -85,8 +86,10 @@
                 &:hover {
                     color: $color-white;
                     text-decoration: none;
+
                     background-color: $color-white-1;
-                    border: 3px solid transparent
+                    border-top: 3px solid transparent;
+                    border-bottom: 3px solid transparent;
                 }
             }
         }

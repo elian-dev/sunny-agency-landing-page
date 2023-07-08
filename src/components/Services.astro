@@ -138,6 +138,10 @@ import Picture from '../components/Picture.astro'
           left: -8px;
           z-index: -1;
         }
+
+        &:hover::after {
+          opacity: unset;
+        }
       }
 
       &--color-pink {
@@ -153,6 +157,10 @@ import Picture from '../components/Picture.astro'
           bottom: -2px;
           left: -8px;
           z-index: -1;
+        }
+
+        &:hover::after {
+          opacity: unset;
         }
       }
     }
