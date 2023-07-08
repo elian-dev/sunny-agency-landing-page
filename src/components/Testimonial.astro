@@ -1,0 +1,58 @@
+---
+interface Props {
+  photo: string
+  altPhoto: string
+  comment: string
+  name: string
+  position: string
+}
+
+const { photo, altPhoto, comment, name, position } = Astro.props
+---
+
+<div class='testimonial'>
+  <img class='testimonial__photo' src={photo} alt={altPhoto} />
+  <p class='testimonial__content'>
+    {comment}
+  </p>
+  <h3 class='testimonial__name'>{name}</h3>
+  <p class='testimonial__position'>{position}</p>
+</div>
+
+<style lang='scss'>
+  .testimonial {
+    display: grid;
+    place-items: center;
+    gap: 0.5rem;
+
+    text-align: center;
+    padding: 0 1rem;
+    margin: 5rem 0;
+
+    @media screen and (min-width: 768px) {
+      margin: 0;
+    }
+
+    &__content {
+      font-size: 1.2rem;
+      color: hsl(213deg 9% 39%);
+      margin-top: 2rem;
+    }
+    &__name {
+      font-size: 1.2rem;
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      color: hsl(212deg 27% 19%);
+      margin-top: 2rem;
+    }
+    &__photo {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+    }
+    &__position {
+      font-size: 1rem;
+      color: hsl(210deg 4% 67%);
+    }
+  }
+</style>
