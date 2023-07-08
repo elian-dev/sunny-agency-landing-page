@@ -36,7 +36,7 @@ import Testimonial from './Testimonial.astro'
   // Testimonials
   .testimonials {
     scroll-snap-align: start;
-    height: 100vh;
+    height: auto;
     display: grid;
     place-items: center;
     gap: 0;
@@ -48,10 +48,12 @@ import Testimonial from './Testimonial.astro'
       color: hsl(210deg 4% 67%);
       text-transform: uppercase;
       letter-spacing: 0.5rem;
-      margin: 4rem 0;
+      margin: 6rem 0 1rem 0;
+      align-self: end;
     }
 
     @media screen and (min-width: 768px) {
+      height: 100vh;
       grid-template-columns: 50px auto 50px;
       grid-template-rows: 25% auto auto 25%;
       &__wrap {
