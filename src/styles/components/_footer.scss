@@ -25,6 +25,10 @@
             margin: 1rem 0 5rem;
             font-size: 1.2rem;
             color: $dark-blue;
+
+            &:hover {
+                color: $color-white;
+            }
         }
 
     }
@@ -43,8 +47,10 @@
 
                 &_item {
                     &_link {
-                        img {
-                            width: 30px;
+                        &:hover {
+                            svg path {
+                                fill: $color-white;
+                            }
                         }
                     }
                 }

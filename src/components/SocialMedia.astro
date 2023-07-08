@@ -1,35 +1,30 @@
+---
+import FbIcon from '/assets/images/social-media/icon-facebook.svg?raw'
+import IgIcon from '/assets/images/social-media/icon-instagram.svg?raw'
+import TwIcon from '/assets/images/social-media/icon-twitter.svg?raw'
+import PiIcon from '/assets/images/social-media/icon-pinterest.svg?raw'
+---
+
 <nav class='social__nav'>
   <ul class='social__nav_menu'>
     <li class='social__nav_menu_item'>
       <a class='social__nav_menu_item_link' href='#'>
-        <img
-          src='/assets/images/social-media/icon-facebook.svg'
-          alt="Facebook's icon"
-        />
+        <Fragment set:html={FbIcon} />
       </a>
     </li>
     <li class='social__nav_menu_item'>
       <a class='social__nav_menu_item_link' href='#'>
-        <img
-          src='/assets/images/social-media/icon-instagram.svg'
-          alt="Instagram's icon"
-        />
+        <Fragment set:html={IgIcon} />
       </a>
     </li>
     <li class='social__nav_menu_item'>
       <a class='social__nav_menu_item_link' href='#'>
-        <img
-          src='/assets/images/social-media/icon-twitter.svg'
-          alt="Twiter's icon"
-        />
+        <Fragment set:html={TwIcon} />
       </a>
     </li>
     <li class='social__nav_menu_item'>
       <a class='social__nav_menu_item_link' href='#'>
-        <img
-          src='/assets/images/social-media/icon-pinterest.svg'
-          alt="Pinterest's icon"
-        />
+        <Fragment set:html={PiIcon} />
       </a>
     </li>
   </ul>
