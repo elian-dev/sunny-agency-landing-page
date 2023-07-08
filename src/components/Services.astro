@@ -2,7 +2,7 @@
 import Picture from '../components/Picture.astro'
 ---
 
-<section class='services'>
+<section class='services section'>
   <Picture
     className='services-thumb'
     src='/assets/images/services/image-transform.jpg'
@@ -11,13 +11,13 @@ import Picture from '../components/Picture.astro'
 
   <div class='services-content'>
     <h2 class='services-content__title'>Transform your brand</h2>
-    <p class='services-content__content'>
+    <p class='services-content__content animate'>
       We are a full-service creative agency specializing in helping brands grow
       fast. Engage your clients through compelling visuals that do most of the
       marketing for you.
     </p>
     <a
-      class='services-content__more services-content__more--color-yellow'
+      class='services-content__more services-content__more--color-yellow animate'
       href='#'>Learn more</a
     >
   </div>
@@ -30,13 +30,13 @@ import Picture from '../components/Picture.astro'
 
   <div class='services-content'>
     <h2 class='services-content__title'>Stand out to the right audience</h2>
-    <p class='services-content__content'>
+    <p class='services-content__content animate'>
       Using a collaborative formula of designers, researchers, photographers,
       videographers, and copywriters, we’ll build and extend your brand in
       digital places.
     </p>
     <a
-      class='services-content__more services-content__more--color-pink'
+      class='services-content__more services-content__more--color-pink animate'
       href='#'>Learn more</a
     >
   </div>
@@ -47,8 +47,10 @@ import Picture from '../components/Picture.astro'
       src='/assets/images/services/image-graphic-design.jpg'
       alt='graphic design'
     />
-    <h2 class='services-content__title'>Graphic design</h2>
-    <p class='services-content__content services-content__content--gallery'>
+    <h2 class='services-content__title animate'>Graphic design</h2>
+    <p
+      class='services-content__content services-content__content--gallery animate'
+    >
       Great design makes you memorable. We deliver artwork that underscores your
       brand message and captures potential clients’ attention.
     </p>
@@ -60,8 +62,10 @@ import Picture from '../components/Picture.astro'
       src='/assets/images/services/image-photography.jpg'
       alt='photography'
     />
-    <h2 class='services-content__title'>Photography</h2>
-    <p class='services-content__content services-content__content--gallery'>
+    <h2 class='services-content__title animate'>Photography</h2>
+    <p
+      class='services-content__content services-content__content--gallery animate'
+    >
       Increase your credibility by getting the most stunning, high-quality
       photos that improve your business image.
     </p>

@@ -11,12 +11,12 @@ const { photo, altPhoto, comment, name, position } = Astro.props
 ---
 
 <div class='testimonial'>
-  <img class='testimonial__photo' src={photo} alt={altPhoto} />
-  <p class='testimonial__content'>
+  <img class='testimonial__photo animate' src={photo} alt={altPhoto} />
+  <p class='testimonial__content animate'>
     {comment}
   </p>
-  <h3 class='testimonial__name'>{name}</h3>
-  <p class='testimonial__position'>{position}</p>
+  <h3 class='testimonial__name animate'>{name}</h3>
+  <p class='testimonial__position animate'>{position}</p>
 </div>
 
 <style lang='scss'>

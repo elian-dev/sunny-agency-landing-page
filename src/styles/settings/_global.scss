@@ -208,3 +208,7 @@ swiper-container {
       opacity: 1;
   }   
 }
+
+.animate.is-visible {
+  animation: display-faded 1s ease-in-out
+}
