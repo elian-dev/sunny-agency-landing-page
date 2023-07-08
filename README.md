@@ -1,184 +1,90 @@
-# Clone Repository
+# Frontend Mentor - Sunnyside agency landing page solution
 
-```
-git clone https://github.com/HackMort/jdk-boilerplate.git
-```
+This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Install
+## Table of contents
 
-```
-npm install
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Install VS Code extensions
+## Overview
 
-Make sure you have installed the following extensions in VS Code. They are required by our workspace configuration:
+### The challenge
 
-- [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Prettier-Standard](https://marketplace.visualstudio.com/items?itemName=numso.prettier-standard-vscode)
-- [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+Users should be able to:
 
-## Run the project
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
 
-```
-npm run dev
-```
+### Screenshot
 
-## 🧞 Commands
+![](./screenshot.png)
 
-All commands are run from the root of the project, from a terminal:
+### Links
 
-| Command                | Action                                                                         |
-| :--------------------- | :----------------------------------------------------------------------------- |
-| `npm install`          | Installs dependencies                                                          |
-| `npm run dev`          | Starts local dev server at `localhost:3000`                                    |
-| `npm run build`        | Build your production site to `./dist/`                                        |
-| `npm run css:build`    | Build the final style.css & style.css.map for production site to `./dist/css/` |
-| `npm run preview`      | Preview your build locally, before deploying                                   |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check`                               |
-| `npm run astro --help` | Get help using the Astro CLI                                                   |
+- Solution URL: [Add solution URL here](https://github.com/elian-dev/sunny-agency-landing-page)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-<!-- Note -->
+## My process
 
-## 📝 Notes:
+### Built with
 
-1. You need to have `Nodejs` installed on your machine. You can follow our guide [here](https://tech.dev-jdoutstanding.com/en/install-nodejs-windows-11/) to install along with other tools we use in our projects.
-2. You only need to run `npm run css:build` before you commit your changes to the repository. In Development, you can use `npm run dev` and let Astro translate the SCSS to CSS on the fly.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Astro](https://astro.build/) - Static files framework
+- [SASS](https://sass-lang.com/) - For styles
 
-## Astro Extenstion
+### What I learned
 
-Install VSCode Extenstion Astro [here](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) to get syntax highlighting and other features.
+I'm happy with the final result, my objective was to learn more about grid and in this project, I could apply it in various sections, furthermore, I learned how to apply animations and give good-looking micro-interactions to the users, and I learned how to import SVG inline in Astro I will put the code bellow how I achieved it.
 
-## Components
-
-To create an Astro component follow this steps:
-
-1- In the src/components folder, create a new folder with the name of the component. This folder will contain the files that make up the component. There are primarily three files: .astro, .scss, and .js/.ts. For example, this is the structure for the jd-modal component:
-
-```
-src/components/Modal
-├── Modal.astro
-├── modal.scss
-└── modal.ts
-```
-
-2- To import the styles in the component, continuing with the example of the jd-modal component, here's how you import its styles within the .astro file:
-
-```js
+```html
 ---
-import './modal.scss'
-
----
-```
-
-## Astro Snippets
-
-Install VSCode Extenstion Astro Snippets [here](https://marketplace.visualstudio.com/items?itemName=SheltonLouis.astro-snippets) to easily create Astro components. Example:
-
-```
-a-base-cmp
-```
-
-This will create a base component with the following code:
-
-```
-
+import logo from '/assets/images/logo.svg?raw'
 ---
 
-type Props = {
-
-}
-
-
-
-const {} = Astro.props
-
----
-
-<div>
-
-
-
+<div class="logo">
+  <Fragment set:html="{logo}" />
 </div>
-
-
-<style></style>
 ```
 
-## VS Code Configuration for ESLINT, Prettier and Stylelint
-
-To ensure a successful installation process and configuration of VS Code Extensions, please follow the instructions provided in the [shared document](https://netorgft9311378-my.sharepoint.com/:w:/g/personal/christian_contreras_jdoutstanding_com/EVhQFZIqY69IvXPflmBl94UBBgEzxn4zpuL7TxosTNrWoA?e=Rj4smm). It is important to note that NPM packages, and its configuration files, have already been added.
-
-## Resources
-
-If you need to learn more about configurations of the installed packages, please refer to the following resources:
-
-[Prettier documentation](https://prettier.io/docs/en/index.html)  
-[ESLint documentation](https://eslint.org/docs/latest/)  
-[Stylelint documentation](https://stylelint.io/)  
-[Stylelint rules](https://stylelint.io/user-guide/rules/)  
-[stylelint-scss rules](https://github.com/stylelint-scss/stylelint-scss#list-of-rules)  
-[stylelint-order](https://www.npmjs.com/package/stylelint-order)  
-[lint-staged](https://www.npmjs.com/package/lint-staged)
-
-## Stylelint Info
-
-If in the future you want to change the way SCSS files are imported and modify Stylelint, you can refer to these properties:
-
-[scss/at-import-no-partial-leading-underscore](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-no-partial-leading-underscore/README.md)  
-[scss/at-import-partial-extension](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-blacklist/README.md)
-
-<!-- Screenshot here when its ready -->
-
-## Swiper Slider Info
-
-This project uses Swiper Slider Element. You can find the documentation [here](https://swiperjs.com/element).
-To control the slider, you can read the API documentation [here](https://swiperjs.com/swiper-api).
-To see demos of the slider, you can go [here](https://swiperjs.com/demos).
-
-## Astro SEO
-
-Astro SEO is a component that allows to configure tags for SEO on each page  
-If you want to know more about this component, you can read the following [documentation](https://github.com/jonasmerlin/astro-seo#readme)  
-In the boilerplate the Astro SEO component is implemented with a custom component that receives props data from a common file
-
-## 🚀 Project Structure
-
+```css
+.logo {
+  svg path {
+    fill: #fff;
+  }
+}
 ```
 
-├── public
-│   ├── favicon.svg
-│   ├── js
-│   │   └── scripts.js
-│   └── assets
-│      ├── fonts
-│      ├── icons
-│      ├──  pdf
-│      └── images
-│           └──images-per-page
-├── src
-│   ├── components
-│   ├── layouts
-│   ├── pages
-│   └── styles
-│       ├── components
-│       ├──── _component-name.scss
-│       ├── settings
-│       └── style.scss
-├── tsconfig.json
-├── README.md
-└── package.json
-```
+By doing that I could modify css properties of the SVG imported as color.
 
-Astro looks for `.astro` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Continued development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro Components.
+Areas to improve
 
-Any static assets, like images, can be placed in the `public/` directory.
-|
+- Stimating time
 
-## 👀 Want to learn more?
+### Useful resources
 
-Feel free to check [our documentation](https://docs.astro.build)
+- [Using SVGs as Astro components and inline CSS](https://ellodave.dev/blog/article/using-svgs-as-astro-components-and-inline-css/) - This helped me beacuse I was having troubles modifying the svg's properties.
+
+## Author
+
+- Website - [elian-dev](https://github.com/elian-dev)
+- Frontend Mentor - [@elian-dev](https://www.frontendmentor.io/profile/elian-dev)
+
+## Acknowledgments
+
+This template is a boilerplate that we have created with the awesome team of JDK.
