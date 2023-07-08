@@ -1,7 +1,7 @@
 ---
 import FooterNavigation from './Navigation/FooterNavigation.astro'
 import SocialMedia from './SocialMedia.astro'
-import logo from '../assets/images/logo-green.svg'
+import logo from '/assets/images/logo.svg?raw'
 ---
 
 <footer class='footer'>
@@ -9,7 +9,7 @@ import logo from '../assets/images/logo-green.svg'
     <!-- Footer Logo -->
     <div class='footer__branding'>
       <a href='#' class='footer__logo'>
-        <img class='footer__logo' src={logo} alt='Sunnyside logo footer' />
+        <Fragment set:html={logo} />
       </a>
     </div>
     <!-- Footer Navigation -->

@@ -13,7 +13,12 @@
     }
 
     &__logo {
-        width: 250px;
+        svg {
+            path {
+                // Wider logo
+                fill: hsl(167.67deg 45.34% 31.57%);
+            }
+        }
     }
 
     &__nav_menu {
