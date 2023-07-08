@@ -89,12 +89,10 @@ main {
     display: none;
   }
 
-  ul li {
-    list-style-type: disc;
-  }
-
   ul li::marker {
+    display: none;
     color: $color-black;
+    list-style-type: disc;
   }
 }
 

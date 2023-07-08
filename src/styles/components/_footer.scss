@@ -1,0 +1,55 @@
+.footer {
+    background-color: hsl(163.16deg 33.73% 66.86%);
+
+    .wrapper {
+        display: grid;
+        grid-template-rows: 50px auto auto 50px;
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    &__branding {
+        grid-row: 2 2;
+    }
+
+    &__logo {
+        width: 250px;
+    }
+
+    &__nav_menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+
+        &_item {
+            margin: 1rem 0 5rem;
+            font-size: 1.2rem;
+            color: $dark-blue;
+        }
+
+    }
+
+    &__links {
+        grid-row: 3 4;
+
+        .social__nav {
+            &_menu {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0;
+                justify-items: center;
+
+                margin: 0 2rem;
+
+                &_item {
+                    &_link {
+                        img {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

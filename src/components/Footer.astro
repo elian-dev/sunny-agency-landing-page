@@ -1,19 +1,27 @@
 ---
-import FooterNavigation from "./Navigation/FooterNavigation.astro";
+import FooterNavigation from './Navigation/FooterNavigation.astro'
+import SocialMedia from './SocialMedia.astro'
+import logo from '../assets/images/logo-green.svg'
 ---
 
-<footer class="footer">
-  <div class="wrapper">
+<footer class='footer'>
+  <div class='wrapper'>
     <!-- Footer Logo -->
-    <div class="footer__branding">
-      <a href="#" class="footer__logo">
-        Logo Here.
-        <!-- <img src="/assets/images/Footer-Logo.png" alt="Footer Logo" /> -->
+    <div class='footer__branding'>
+      <a href='#' class='footer__logo'>
+        <img class='footer__logo' src={logo} alt='Sunnyside logo footer' />
       </a>
     </div>
     <!-- Footer Navigation -->
-    <div class="footer__links">
+    <div class='footer__links'>
       <FooterNavigation />
+      <SocialMedia />
+      <!-- <div class='attribution'>
+        Challenge by <a
+          href='https://www.frontendmentor.io?ref=challenge'
+          target='_blank'>Frontend Mentor</a
+        >. Coded by <a href='#'>Your Name Here</a>.
+      </div> -->
     </div>
   </div>
 </footer>
