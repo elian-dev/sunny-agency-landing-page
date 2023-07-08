@@ -48,7 +48,7 @@ import Picture from '../components/Picture.astro'
       alt='graphic design'
     />
     <h2 class='services-content__title'>Graphic design</h2>
-    <p class='services-content__content'>
+    <p class='services-content__content services-content__content--gallery'>
       Great design makes you memorable. We deliver artwork that underscores your
       brand message and captures potential clients’ attention.
     </p>
@@ -61,7 +61,7 @@ import Picture from '../components/Picture.astro'
       alt='photography'
     />
     <h2 class='services-content__title'>Photography</h2>
-    <p class='services-content__content'>
+    <p class='services-content__content services-content__content--gallery'>
       Increase your credibility by getting the most stunning, high-quality
       photos that improve your business image.
     </p>
@@ -208,6 +208,9 @@ import Picture from '../components/Picture.astro'
 
       &__content {
         text-align: left;
+        &--gallery {
+          text-align: center;
+        }
       }
 
       &__more {
