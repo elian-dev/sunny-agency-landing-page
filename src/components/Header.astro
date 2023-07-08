@@ -1,14 +1,11 @@
 ---
 import HeaderNavigation from './Navigation/HeaderNavigation.astro'
-import logo from '../assets/images/logo.svg'
+import logo from '/assets/images/logo.svg?raw'
 ---
 
 <header class='header'>
   <a href='/'>
-    <picture class='header__logo-picture'>
-      <source srcset={logo} type='image/svg+xml' />
-      <img class='header__logo' src={logo} alt='Sunnyside logo' />
-    </picture>
+    <Fragment set:html={logo} />
   </a>
 
   <img
